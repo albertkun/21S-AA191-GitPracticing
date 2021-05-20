@@ -1,6 +1,8 @@
 # Hello Welcome to the Git Practicing Repo
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
+Causing a git merge.
+
 ## Making a new branch:
 
 ```
