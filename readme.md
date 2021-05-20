@@ -75,7 +75,7 @@ Run another `git pull`
 ```
 git pull
 ```
-If you didn't change the file at the same time, then auto-merging could take place.
+If you didn't change the file at the same time, then auto-merging could take place!
 
 Then proceed to push as normal:
 ```
