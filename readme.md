@@ -20,8 +20,14 @@ git commit -am "message"
 ```
 
 ### Push your changes to your new branch
-```
 
+This code creates a new branch called `helloNewBranch` on GitHub to push to:
+```
+git push --set-upstream origin helloNewBranch
+```
+You only need to run it when the branch DOES NOT exist on GitHub!!! After the branch is on GitHub, you can just to normal `git pushes`.
+```
+git push
 ```
 
 ## Testing Area
