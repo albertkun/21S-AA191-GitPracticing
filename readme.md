@@ -1,6 +1,29 @@
 # Hello Welcome to the Git Practicing Repo
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
+## Making a new branch:
+
+```
+git checkout -b helloNewBranch
+```
+This creates a branch called `helloNewBranch` and switches to it!
+
+### `git add .` your changes to the new branch:
+Make some changes and add them to the branch:
+```
+git add .
+```
+
+### Add a message to your commit
+```
+git commit -am "message"
+```
+
+### Push your changes to your new branch
+```
+
+```
+
 ## Testing Area
 ```md
 This area is completely for testing!!!
