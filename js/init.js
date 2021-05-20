@@ -23,8 +23,9 @@ fetch(url)
         }
 )
 
-let speakFluentEnglish = L.featureGroup();
-let speakOtherLanguage = L.featureGroup();
+let speakFluentEnglish = L.markerClusterGroup();
+let speakOtherLanguage = L.markerClusterGroup();
+// let clusterMarkers = L.markerClusterGroup();
 
 let exampleOptions = {
     radius: 4,
@@ -76,7 +77,7 @@ function formatData(theData){
         }
         console.log(formattedData)
         formattedData.forEach(addMarker)
-        speakFluentEnglish.addTo(map)
+        map.addLayer(speakFluentEnglish)
         speakOtherLanguage.addTo(map)
         let allLayers = L.featureGroup([speakFluentEnglish,speakOtherLanguage]);
         map.fitBounds(allLayers.getBounds());        
