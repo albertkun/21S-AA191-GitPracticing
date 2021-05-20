@@ -77,7 +77,7 @@ function formatData(theData){
         }
         console.log(formattedData)
         formattedData.forEach(addMarker)
-        map.addLayer(speakFluentEnglish)
+        speakFluentEnglish.addTo(map)
         speakOtherLanguage.addTo(map)
         let allLayers = L.featureGroup([speakFluentEnglish,speakOtherLanguage]);
         map.fitBounds(allLayers.getBounds());        
