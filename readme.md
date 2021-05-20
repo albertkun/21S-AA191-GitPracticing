@@ -1,6 +1,8 @@
 # Hello Welcome to the Git Practicing Repo
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
+
+
 Start by cloning this repo:
 ```
 git clone https://github.com/albertkun/21S-AA191-GitPracticing.git
@@ -14,6 +16,7 @@ git commit -am "message"
 git push
 ```
 
+[Refer to this medium post for a refresher on git merges](https://medium.com/swlh/git-branching-and-merging-made-easy-f7dacd4aa75e)
 ## Testing Area
 ```md
 This area is completely for testing!!!
@@ -48,7 +51,19 @@ You only need to run it when the branch DOES NOT exist on GitHub!!! After the br
 git push
 ```
 
-This is all great when you are working one file at a time, but what happens when a `git push` affects in a file that was changed locally but someone else edited on GitHub?
+
+## Updating your branch
+Sometimes you want to make sure your branch is up to date, so you can use the following command:
+```
+git merge <branch_you_want_to_merge>
+```
+For example this command will `merge` content from `main` to the branch I am currently on:
+```
+git merge main
+```
+However!!!
+
+What happens when a `git push` affects in a file that was changed locally but someone else edited on GitHub?
 
 ## Merge Conflicts!!!
 A `merge conflict` occurs when one file was changed in two places. For example, Person A edits line 1 of `readme.md` and `Person B` also edits line 1 of `readme.md`. A `git` doesn't know which changes to keep, so a person needs to take a look and manually `merge` them.
