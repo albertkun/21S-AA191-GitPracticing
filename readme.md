@@ -6,17 +6,17 @@ Start by cloning this repo:
 git clone https://github.com/albertkun/21S-AA191-GitPracticing.git
 ```
 
-## Testing Area
-```md
-This area is completely for testing!!!
-```
-
 Remember, here is the basic git commands for adding new changes:
 
 ```
 git add .
 git commit -am "message"
 git push
+```
+
+## Testing Area
+```md
+This area is completely for testing!!!
 ```
 
 ## Making a new branch:
