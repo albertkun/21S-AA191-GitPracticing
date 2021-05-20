@@ -23,8 +23,8 @@ fetch(url)
         }
 )
 
-let speakFluentEnglish = L.featureGroup();
-let speakOtherLanguage = L.featureGroup();
+let speakFluentEnglish = L.markerClusterGroup();
+let speakOtherLanguage = L.markerClusterGroup();
 
 let exampleOptions = {
     radius: 4,
