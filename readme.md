@@ -14,6 +14,7 @@ git commit -am "message"
 git push
 ```
 
+[Refer to this medium post for a refresher on git merges](https://medium.com/swlh/git-branching-and-merging-made-easy-f7dacd4aa75e)
 ## Testing Area
 ```md
 This area is completely for testing!!!
@@ -48,12 +49,24 @@ You only need to run it when the branch DOES NOT exist on GitHub!!! After the br
 git push
 ```
 
-This is all great when you are working one file at a time, but what happens when a `git push` affects in a file that was changed locally but someone else edited on GitHub?
+
+## Updating your branch
+Sometimes you want to make sure your branch is up to date, so you can use the following command:
+```
+git merge <branch_you_want_to_merge>
+```
+For example this command will `merge` content from `main` to the branch I am currently on:
+```
+git merge main
+```
+However!!!
+
+What happens when a `git push` affects in a file that was changed locally but someone else edited on GitHub?
 
 ## Merge Conflicts!!!
 A `merge conflict` occurs when one file was changed in two places. For example, Person A edits line 1 of `readme.md` and `Person B` also edits line 1 of `readme.md`. A `git` doesn't know which changes to keep, so a person needs to take a look and manually `merge` them.
 
-First, do a `git pull` which will show that you are behind a commit:
+First, do a `git pull` which will check if you are behind a commit:
 
 ```
 git pull
@@ -62,7 +75,7 @@ git pull
 When your commit is behind, you may receive this message:
 ```
 error: Your local changes to the following files would be overwritten by merge:
-        readme.md
+        **SOME FILE(S)**
 Please commit your changes or stash them before you merge.
 Aborting
 Updating 6ac38e2..4dbc13c
@@ -104,7 +117,9 @@ After choosing an option, you can can push as normal:
 git push
 ```
 
-In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
+## Try using Markdown if you finish ahead of time:
+
+In the meantime, here are some tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
 ## 1.0 Headings 
 Use `#` to demarcate headings and levels!
