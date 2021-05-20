@@ -81,6 +81,9 @@ Then proceed to push as normal:
 ```
 git push
 ```
+If files did change at the same time, you have to choose which version to keep:
+
+
 
 In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
