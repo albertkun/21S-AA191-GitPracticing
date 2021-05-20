@@ -1,9 +1,22 @@
 # Hello Welcome to the Git Practicing Repo
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
+Start by cloning this repo:
+```
+git clone https://github.com/albertkun/21S-AA191-GitPracticing.git
+```
+
 ## Testing Area
 ```md
 This area is completely for testing!!!
+```
+
+Remember, here is the basic git commands for adding new changes:
+
+```
+git add .
+git commit -am "message"
+git push
 ```
 
 ## Making a new branch:
@@ -83,7 +96,13 @@ git push
 ```
 If files did change at the same time, you have to choose which version to keep:
 
+![]()
 
+After choosing an option, you can can push as normal:
+
+```
+git push
+```
 
 In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
