@@ -37,8 +37,22 @@ git push
 
 This is all great when you are working one file at a time, but what happens when a `git push` affects in a file that was changed locally but someone else edited on GitHub?
 
-## Merge Errors!!!
-A `git merge` must take place when one file was changed in two places. For example, Person A edits line 1 of `readme.md` and `Person B` also edits line 1 of `readme.md`. A computer doesn't know which changes to keep, so a person needs to take a look and manually `merge` them.
+## Merge Conflicts!!!
+A `merge conflict` occurs when one file was changed in two places. For example, Person A edits line 1 of `readme.md` and `Person B` also edits line 1 of `readme.md`. A `git` doesn't know which changes to keep, so a person needs to take a look and manually `merge` them.
+
+First, do a `git pull` which will show that you are behind a commit:
+
+```
+git pull
+```
+
+When your commit is behind, you will receive this message:
+```
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+```
 
 
 
