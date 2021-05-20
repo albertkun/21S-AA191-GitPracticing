@@ -1,6 +1,12 @@
 # Hello Welcome to the Git Practicing Repo
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
+## Testing Area
+```md
+This area is completely for testing!!!
+```
+
+
 ## Making a new branch:
 
 ```
@@ -25,15 +31,17 @@ This code creates a new branch called `helloNewBranch` on GitHub to push to:
 ```
 git push --set-upstream origin helloNewBranch
 ```
-You only need to run it when the branch DOES NOT exist on GitHub!!! After the branch is on GitHub, you can just to normal `git pushes`.
+You only need to run it when the branch DOES NOT exist on GitHub!!! After the branch is on GitHub, use `git push`:
 ```
 git push
 ```
 
-## Testing Area
-```md
-This area is completely for testing!!!
-```
+This is all great when you are working one file at a time, but what happens when a `git push` affects in a file that was changed locally but someone else edited on GitHub?
+
+## Merge Errors!!!
+A `git merge` must take place when one file was changed in two places. For example, Person A edits line 1 of `readme.md` and `Person B` also edits line 1 of `readme.md`. A computer doesn't know which changes to keep, so a person needs to take a look and manually `merge` them.
+
+
 
 In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
