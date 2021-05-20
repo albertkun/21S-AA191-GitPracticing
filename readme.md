@@ -54,7 +54,7 @@ hint: as appropriate to mark resolution and make a commit.
 fatal: Exiting because of an unresolved conflict.
 ```
 
-
+triggering another git merge conflict
 
 In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
