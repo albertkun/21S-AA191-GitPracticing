@@ -6,7 +6,6 @@ This repo was designed for practicing `git` commands for 21S-AsianAm191, expect 
 This area is completely for testing!!!
 ```
 
-
 ## Making a new branch:
 
 ```
