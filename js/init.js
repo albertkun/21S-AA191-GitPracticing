@@ -125,7 +125,6 @@ function createButtons(lat,lng,title){
     spaceForButtons.appendChild(newButton);
 }
 
-
 function formatData(theData){
         const formattedData = []
         const rows = theData.feed.entry
