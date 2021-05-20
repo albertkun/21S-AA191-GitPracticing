@@ -2,7 +2,10 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr; 
     grid-auto-rows: minmax(5px, auto);
-    grid-template-areas: "header header" "mappanel sidebar" 
+    grid-template-areas: "header header" "mappanel sidebar" ;
+    overflow: hidden;    
+    height: 100vh;
+    width: 99vw;
 }
 
 header{
@@ -17,7 +20,9 @@ header{
 #contents{
     grid-area: sidebar;
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 100px;
+    overflow-y:scroll;
 }
 
 /* fix for survey to fit in the iframe */
