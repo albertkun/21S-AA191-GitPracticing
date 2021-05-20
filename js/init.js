@@ -2,6 +2,9 @@ const map = L.map('map').setView([34.0709, -118.444], 5);
 
 const url = "https://spreadsheets.google.com/feeds/list/1upD99bKWIO68jL8MKWV67KE-_H_TVn2bCwqyQkqNsBw/oxw5dh3/public/values?alt=json"
 
+const scroller = scrollama();
+
+
 let Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
 	maxZoom: 16
@@ -53,6 +56,8 @@ function createButtons(lat,lng,title){
     const newButton = document.createElement("button");
     newButton.id = "button"+title;
     newButton.innerHTML = title;
+    newButton.setAttribute("class","step")
+    newButton.setAttribute("data-step",newButton.id)
     newButton.setAttribute("lat",lat); 
     newButton.setAttribute("lng",lng);
     newButton.addEventListener('click', function(){
@@ -79,7 +84,19 @@ function formatData(theData){
         speakFluentEnglish.addTo(map)
         speakOtherLanguage.addTo(map)
         let allLayers = L.featureGroup([speakFluentEnglish,speakOtherLanguage]);
-        map.fitBounds(allLayers.getBounds());        
+        map.fitBounds(allLayers.getBounds());
+        scroller
+        .setup({
+            step: ".step",
+        })
+        .onStepEnter((response) => {
+            // { element, index, direction }
+            console.log('hi')
+        })
+        .onStepExit((response) => {
+            // { element, index, direction }
+        });
+        
 }
 
 let layers = {
@@ -88,3 +105,10 @@ let layers = {
 }
 
 L.control.layers(null,layers).addTo(map)
+
+
+
+// setup the instance, pass callback functions
+
+// setup resize event
+window.addEventListener("resize", scroller.resize);
