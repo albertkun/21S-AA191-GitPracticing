@@ -40,7 +40,7 @@ This is all great when you are working one file at a time, but what happens when
 ## Merge Errors!!!
 A `git merge` must take place when one file was changed in two places. For example, Person A edits line 1 of `readme.md` and `Person B` also edits line 1 of `readme.md`. A computer doesn't know which changes to keep, so a person needs to take a look and manually `merge` them.
 
-
+triggering another git merge conflict
 
 In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
