@@ -46,15 +46,41 @@ First, do a `git pull` which will show that you are behind a commit:
 git pull
 ```
 
-When your commit is behind, you will receive this message:
+When your commit is behind, you may receive this message:
 ```
-error: Pulling is not possible because you have unmerged files.
-hint: Fix them up in the work tree, and then use 'git add/rm <file>'
-hint: as appropriate to mark resolution and make a commit.
-fatal: Exiting because of an unresolved conflict.
+error: Your local changes to the following files would be overwritten by merge:
+        readme.md
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 6ac38e2..4dbc13c
 ```
 
-triggering another git merge conflict
+Do a git commit:
+
+```
+git add .
+git commit -am "message"
+git push
+```
+After you try to push, this message should pop-up:
+
+```
+error: failed to push some refs to 'https://github.com/albertkun/21S-AA191-GitPracticing.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.```
+```
+Run another `git pull`
+```
+git pull
+```
+If you didn't change the file at the same time, then auto-merging could take place.
+
+Then proceed to push as normal:
+```
+git push
+```
 
 In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
