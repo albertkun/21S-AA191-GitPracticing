@@ -1,8 +1,6 @@
 # Hello Welcome to the Git Practicing Repo
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
-
-
 Start by cloning this repo:
 ```
 git clone https://github.com/albertkun/21S-AA191-GitPracticing.git
@@ -68,7 +66,7 @@ What happens when a `git push` affects in a file that was changed locally but so
 ## Merge Conflicts!!!
 A `merge conflict` occurs when one file was changed in two places. For example, Person A edits line 1 of `readme.md` and `Person B` also edits line 1 of `readme.md`. A `git` doesn't know which changes to keep, so a person needs to take a look and manually `merge` them.
 
-First, do a `git pull` which will show that you are behind a commit:
+First, do a `git pull` which will check if you are behind a commit:
 
 ```
 git pull
@@ -77,7 +75,7 @@ git pull
 When your commit is behind, you may receive this message:
 ```
 error: Your local changes to the following files would be overwritten by merge:
-        readme.md
+        **SOME FILE(S)**
 Please commit your changes or stash them before you merge.
 Aborting
 Updating 6ac38e2..4dbc13c
@@ -119,7 +117,9 @@ After choosing an option, you can can push as normal:
 git push
 ```
 
-In the meantime, here are some friendly tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
+## Try using Markdown if you finish ahead of time:
+
+In the meantime, here are some tips for using `markdown`, which is used in `readme.md` files on `GitHub`.
 
 ## 1.0 Headings 
 Use `#` to demarcate headings and levels!
