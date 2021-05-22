@@ -121,29 +121,7 @@ let layers = {
 }
 
 L.control.layers(null,layers).addTo(map)
-
-
-
 // setup the instance, pass callback functions
 
 // setup resize event
 window.addEventListener("resize", scroller.resize);
-
-// using d3 for convenience, and storing a selected elements
-// let container = d3.select('#scroll');
-// let graphic = container.select('.scroll__graphic');
-// let chart = graphic.select('.chart');
-// let text = container.select('.scroll__text');
-// let step = text.selectAll('.step');
-// let client;
-// let source;
-// let style;
-// let Cartolayer;
-
-
-
-// initialize the scrollama
-// let scroller = scrollama();
-
-    //        // start it up
-    //    init();
