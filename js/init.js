@@ -2,8 +2,9 @@ const map = L.map('map').setView([34.0709, -118.444], 5);
 
 const url = "https://spreadsheets.google.com/feeds/list/1upD99bKWIO68jL8MKWV67KE-_H_TVn2bCwqyQkqNsBw/oxw5dh3/public/values?alt=json"
 
+// create a new global scoped variable called 'scroller'
+// you can think of this like the "map" with leaflet (i.e. const map = L.map('map'))
 let scroller = scrollama();
-
 
 let Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
@@ -11,10 +12,6 @@ let Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/r
 });
 
 Esri_WorldGrayCanvas.addTo(map)
-
-// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-// }).addTo(map);
 
 fetch(url)
 	.then(response => {
@@ -85,34 +82,33 @@ function formatData(theData){
         speakOtherLanguage.addTo(map)
         let allLayers = L.featureGroup([speakFluentEnglish,speakOtherLanguage]);
         map.fitBounds(allLayers.getBounds());
+        // setup the instance, pass callback functions
+        // use the scrollama scroller variable to set it up
         scroller
         .setup({
             step: ".step",
-            debug: true,
-            progress: true,
         })
+        // do something when you enter a "step":
         .onStepEnter((response) => {
-            // { element, index, direction }
-            console.log('hi')
-            // scrollStepper(response)
-            // scrollStepper('attributes')
+            // you can access these objects: { element, index, direction }
+            // use the function to use element attributes of the button 
+            // it contains the lat/lng: 
             scrollStepper(response.element.attributes)
         })
         .onStepExit((response) => {
             // { element, index, direction }
-            scrollStepper(response.element.attributes)
+            // left this in case you want something to happen when someone
+            // steps out of a div to know what story they are on.
         });
         
 }
 function scrollStepper(thisStep){
-    // console.log(thisStep.element.attributes)
-    // let stepAttributes = thisStep.element.attributes
-    // console.log(stepAttributes)
-    console.log(thisStep.lat)
+    // optional: console log the step data attributes:
+    // console.log("you are in thisStep: "+thisStep)
     let thisLat = thisStep.lat.value
     let thisLng = thisStep.lng.value
+    // tell the map to fly to this step's lat/lng pair:
     map.flyTo([thisLat,thisLng])
-
 }
 
 let layers = {
@@ -121,7 +117,6 @@ let layers = {
 }
 
 L.control.layers(null,layers).addTo(map)
-// setup the instance, pass callback functions
 
-// setup resize event
+// setup resize event for scrollama incase someone wants to resize the page...
 window.addEventListener("resize", scroller.resize);
