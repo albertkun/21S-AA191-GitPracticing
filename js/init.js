@@ -88,6 +88,8 @@ function formatData(theData){
         scroller
         .setup({
             step: ".step",
+            debug: true,
+            progress: true,
         })
         .onStepEnter((response) => {
             // { element, index, direction }
@@ -98,6 +100,7 @@ function formatData(theData){
         })
         .onStepExit((response) => {
             // { element, index, direction }
+            scrollStepper(response.element.attributes)
         });
         
 }
@@ -106,12 +109,9 @@ function scrollStepper(thisStep){
     // let stepAttributes = thisStep.element.attributes
     // console.log(stepAttributes)
     console.log(thisStep.lat)
-    let thisLat = Number(thisStep.lat.value)
-    let thisLng = Number(thisStep.lng.value)
+    let thisLat = thisStep.lat.value
+    let thisLng = thisStep.lng.value
     map.flyTo([thisLat,thisLng])
-    step.classed('is-active', function (d, i) {
-        return i === response.index;
-    })
 
 }
 
