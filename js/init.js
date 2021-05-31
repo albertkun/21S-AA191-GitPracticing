@@ -1,6 +1,6 @@
 const map = L.map('map').setView([34.0709, -118.444], 5);
 
-const url = "https://spreadsheets.google.com/feeds/list/1upD99bKWIO68jL8MKWV67KE-_H_TVn2bCwqyQkqNsBw/oxw5dh3/public/values?alt=json"
+const url = "https://spreadsheets.google.com/feeds/list/1S2rdXU_e0T-APmkcVG8Vjm7XB4og7CUjszqNqqztI14/od6/public/values?alt=json"
 
 let Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
@@ -77,10 +77,10 @@ function getBoundary(layer){
                 boundary = data
                 collected = turf.collect(boundary, thePoints, 'speakEnglish', 'values');
                 // collected = turf.buffer(thePoints, 50,{units:'miles'});
-                console.log(collected.features)
+                // console.log(collected.features)
                 L.geoJson(collected,{onEachFeature: onEachFeature,style:function(feature)
                 {
-                    console.log(feature)
+                    // console.log(feature)
                     if (feature.properties.values.length > 0) {
                         return {color: "#ff0000",stroke: false};
                     }
@@ -93,13 +93,14 @@ function getBoundary(layer){
     )   
 }
 
-console.log(boundary)
+// console.log(boundary)
 
 function addMarker(data){
-    let speakEnglish = data.doyouspeakenglishfluently
+    let speakEnglish = data.areyoufearfulofgoingoutsideduetotheriseofasianamericanhatecrimes
     let thisPoint = turf.point([Number(data.lng),Number(data.lat)],{speakEnglish})
+    console.log(thisPoint)
     allPoints.push(thisPoint)
-    if(data.doyouspeakenglishfluently == "Yes"){
+    if(speakEnglish == "Yes"){
         exampleOptions.fillColor = "green"
         speakFluentEnglish.addLayer(L.circleMarker([data.lat,data.lng],exampleOptions).bindPopup(`<h2>Speak English fluently</h2>`))
         createButtons(data.lat,data.lng,data.location)
