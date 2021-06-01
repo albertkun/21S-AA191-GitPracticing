@@ -32,5 +32,5 @@ Mental Health Group |
 SEA Admit Tours |
 Food Distribution Project | Leaflet Control Window |
 LA Tenants Survey |
-Reimagining 6th Street | Leaflet Sleep | The first implementation has been wonky, we're trying to fix it! But we think this will be an extremely helpful tool in making sure our map stays fixed on the boundary of Koreatown. This tool will be applied in tandem with the button Albert suggested we implement at the bottom to zoom out to all submissions. 
+Reimagining 6th Street | Leaflet Sleep | The first implementation has been wonky, we're trying to fix it! But we think this will be an extremely helpful tool in making sure our map stays fixed on the boundary of Koreatown. This tool will be applied in tandem with the button Albert suggested we implement at the bottom to zoom out to all submissions. | https://lvalles10.github.io/Transportation-Group/Reimagining_6th/index.html
 
