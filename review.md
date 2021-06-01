@@ -31,6 +31,6 @@ Against Asian Hate |
 Mental Health Group | 
 SEA Admit Tours |
 Food Distribution Project | Leaflet Control Window | This is a very useful feature that we believe can allow us to better introduce our project goals and improve navigation for our users. It's really cool that you can modify the HTML within the window, making it easier to edit what's being displayed. We may add a button to our page that will allow users to revisit the popup if they would like to. | 
-LA Tenants Survey |
+LA Tenants Survey | Sidebar & BeautifyMarker | The sidebar looks like it'd be a good way for us to display stories on our site! The documentation looks long and complicated though, so it might take a while to work through. BeautifyMarker looks promising as well as a way to improve accessibility by differentiating markers with icons along with colors. Again, there are a few steps to it, so we don't have a working example yet. | N/A
 Reimagining 6th Street | Leaflet Sleep | The first implementation has been wonky, we're trying to fix it! But we think this will be an extremely helpful tool in making sure our map stays fixed on the boundary of Koreatown. This tool will be applied in tandem with the button Albert suggested we implement at the bottom to zoom out to all submissions. | https://lvalles10.github.io/Transportation-Group/Reimagining_6th/index.html
 
