@@ -26,7 +26,7 @@ Leaflet Hex Timeslider | https://github.com/albertkun/leaflet_hex_timeslider|
 ## Plugin Review
 Group|Tool|Comments|Example
 -----|----|--------|----------------------
-Migration Justice  | Sleep | This would be really helpful if our map was centered in our website but since it isn't then I don't think we will use it as it require substantial revision of our page design. I would recomment it to those with bigger maps - maybe the SEA group? :-) | |ß
+Migration Justice  | Sleep | This would be really helpful if our map was centered in our website but since it isn't then I don't think we will use it as it require substantial revision of our page design. I would recomment it to those with bigger maps - maybe the SEA group? :-) | |
 Against Asian Hate | 
 Mental Health Group | 
 SEA Admit Tours |
