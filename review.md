@@ -30,7 +30,7 @@ Migration Justice  |
 Against Asian Hate | 
 Mental Health Group | 
 SEA Admit Tours |
-Food Distribution Project | Leaflet Control Window |
+Food Distribution Project | Leaflet Control Window | This is a very useful feature that we believe can allow us to better introduce our project goals and improve navigation for our users. It's really cool that you can modify the HTML within the window, making it easier to edit what's being displayed. We may add a button to our page that will allow users to revisit the popup if they would like to. | 
 LA Tenants Survey |
 Reimagining 6th Street |
 
