@@ -27,7 +27,7 @@ Leaflet Hex Timeslider | https://github.com/albertkun/leaflet_hex_timeslider|
 Group|Tool|Comments|Example
 -----|----|--------|----------------------
 Migration Justice  | 
-Against Asian Hate | 
+Against Asian Hate | Beautify Marker | Hoping to implement this for our final project, will check on other plugins if needed. | N/A 
 Mental Health Group | 
 SEA Admit Tours |
 Food Distribution Project |
