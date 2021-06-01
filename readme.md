@@ -2,7 +2,7 @@
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
 ## 6/1 Assignment
-[Leaflet Plugin Review](./readme.md)
+[Leaflet Plugin Review](./review.md)
 
 ## How to use this repo
 
