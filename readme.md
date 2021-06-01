@@ -1,6 +1,10 @@
 # Hello Welcome to the Git Practicing Repo
 This repo was designed for practicing `git` commands for 21S-AsianAm191, expect things to 💥!
 
+## 6/1 Assignment
+[Leaflet Plugin Review](./readme.md)
+
+## How to use this repo
 Start by cloning this repo:
 ```
 git clone https://github.com/albertkun/21S-AA191-GitPracticing.git
